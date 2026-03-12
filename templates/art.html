@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}OmegaFalcon: Art{% endblock title %}
+
+{% block content %}
+<h1 class="title">
+    {{section.title}}
+</h1>
+<div id="tag-filter">
+    {% set tags = get_taxonomy(kind="tags") %}
+    {% for tag in tags.items %}
+        <button class="tag-btn" data-tag="{{ tag.name }}">{{ tag.name }}</button>
+    {% endfor %}
+
+    <button id="filter-mode-btn" data-mode="OR">+</button>
+</div>
+<div class="gallery">
+    {% for artwork in section.pages %}
+        {% set_global main_imgs = [] %}
+        {% set_global extra_imgs = [] %}
+        {% for asset in artwork.assets %}
+            {% if asset is containing("\extras\") %}
+                {% set_global extra_imgs = extra_imgs | concat(with=asset) %}
+            {% else %}
+                {% set_global main_imgs = main_imgs | concat(with=asset) %}
+            {% endif %}
+        {% endfor %}
+        <div class="photocard"
+             data-tags="{% if artwork.taxonomies.tags %}{{ artwork.taxonomies.tags | join(sep=',') }}{% endif %}"
+             data-slug="{{ artwork.slug }}"
+             data-main-imgs="{{ main_imgs | json_encode() }}"
+             data-extra-imgs="{{ extra_imgs | json_encode() }}">
+            <a href="#{{ artwork.slug }}">
+                {% if artwork.assets %}
+                    {% set image = resize_image(path=main_imgs[0], width=250, height=200, op="fill", format="png", quality=80) %}
+                    <img src="{{ image.url }}" alt="{{ artwork.title }}">
+                {% endif %}
+                
+                <div class="overlay">
+                    <span class="art-title">{{ artwork.title }}</span>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+<script src="{{ get_url(path="js/filter.js") }}"></script>
+{% endblock content %}

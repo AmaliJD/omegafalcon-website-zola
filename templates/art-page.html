@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <script>
+        // Redirect the user back to the gallery with the hash
+        // Example: /gallery/my-artwork/ -> /gallery/#my-artwork
+        window.location.replace("/art/#{{ page.slug }}");
+    </script>
+</head>
+<body>
+    <p>Redirecting to <a href="/art/#{{ page.slug }}">Art</a>...</p>
+</body>
+</html>

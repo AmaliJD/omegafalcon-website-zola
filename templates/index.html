@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}OmegaFalcon{% endblock title %}
+
+{% block content %}
+<h1 class="title">
+    OmegaFalcon
+</h1>
+<p>a.k.a. Amali</p>
+<p><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></p>
+<p><a href="{{ get_url(path='@/art/_index.md') }}">Art</a></p>
+<p><a href="{{ get_url(path='@/games/_index.md') }}">Games</a></p>
+{% endblock content %}
