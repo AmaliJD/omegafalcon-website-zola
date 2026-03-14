@@ -1,0 +1,77 @@
+.tag-filter {
+    margin: 10px 0px;
+}
+
+.tag-filter button {
+    background-color: var(--btn-color, #ffffff);
+    color: var(--text-color, #000000);
+    
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: 3px 3px 0px rgba(130, 48, 37, 0.333);
+
+    font-size: 20px;
+    font-weight: 550;
+    padding: 6px 15px;
+
+    transition: color 0.15s, background-color 0.15s, transform 0.18s ease, scale 0.3s, rotate 0.15s, box-shadow 0.15s, border-color .15s;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+
+.tag-filter button.selected {
+    background-color: #24a7ff;
+    color: #befffa;
+
+    font-style: italic;
+    transform: translateY(-6px);
+
+    box-shadow: 3px 3px 0px rgba(29, 24, 80, 0.333);
+}
+
+.tag-filter button:hover:not(.selected) {
+    transform: translateY(-6px) rotate(-2deg);
+}
+
+.tag-filter button:hover.selected {
+    background-color: #2189e4;
+    color: #cffffa;
+}
+
+
+/* UNION */
+.tag-filter button#union-btn {
+    font-size: 20px;
+    font-weight: 550;
+    padding: 4px 10px;
+    border: solid;
+    border-color: transparent;
+
+    /* transition: box-shadow 0.15s; */
+}
+
+.tag-filter button.selected#union-btn {
+    background-color: #9b2828;
+    color: var(--btn-color, #ffffff);
+
+    font-style: italic;
+    transform: rotate(-45deg);
+
+    box-shadow: 0px 4.2px 0px rgba(130, 48, 37, 0.333);
+}
+
+.tag-filter button:hover:not(.selected)#union-btn {
+    transform: translateY(0px) rotate(0deg);
+
+    
+    background-color: #fae5e5;
+    color: var(--text-color, #000000);
+    border-color: var(--text-color, #000000);
+}
+
+.tag-filter button:hover.selected#union-btn {
+    background-color: #851418;
+    color: var(--btn-color, #ffffff);
+    border-color: #c85777;
+}

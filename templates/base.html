@@ -4,6 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ get_url(path='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ get_url(path='styles/tag_filter.css') }}">
+
+    {% set pageType = page | default(value=section) %}
+    {% if pageType.extra.colors %}
+    <style>
+        :root {
+            {% for key, value in pageType.extra.colors %}
+                --{{ key | replace(from="_", to="-") }}: {{ value }};
+            {% endfor %}
+        }
+    </style>
+    {% endif %}
     <title>
         {% block title %}
         OmegaFalcon

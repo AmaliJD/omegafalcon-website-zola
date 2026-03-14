@@ -1,12 +1,39 @@
+html {
+    background: linear-gradient(
+        to bottom,
+        var(--bg-color-1, #ffffff),
+        var(--bg-color-2, #ffffff),
+        var(--bg-color-3, #ffffff)
+    );
+
+    background-attachment: fixed;
+}
+
+.page-container {
+    margin: 40px 4%;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 800;
+    font-family: sans-serif;
+    text-decoration: underline;
+    color: var(--text-color, #000000)
+}
+
+.title {
+    margin: 20px 0px;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: .4rem;
 
-    /* background: linear-gradient(to bottom, rgba(255, 253, 248, 0.803), rgba(252, 242, 255, 0.525));
-    padding: 20px;
-    border-radius: 20px; */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.474), rgba(255, 255, 255, 0.221));
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .photo-card {

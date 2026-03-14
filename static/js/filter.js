@@ -1,5 +1,5 @@
 const tagButtons = document.querySelectorAll('.tag-btn');
-const modeButton = document.getElementById('filter-mode-btn');
+const modeButton = document.getElementById('union-btn');
 const photoCards = document.querySelectorAll('.photo-card');
 
 let selectedTags = new Set();
@@ -9,7 +9,7 @@ let strictMatchMode = false; // "AND" mode
 modeButton.addEventListener('click', () => {
     strictMatchMode = !strictMatchMode;
     modeButton.textContent = strictMatchMode ? "×" : "+";
-    modeButton.classList.toggle('active', strictMatchMode);
+    modeButton.classList.toggle('selected', strictMatchMode);
     applyFilters();
 });
 
@@ -20,12 +20,12 @@ tagButtons.forEach(btn => {
         if (selectedTags.has(tag))
         {
             selectedTags.delete(tag);
-            btn.classList.remove('active');
+            btn.classList.remove('selected');
         }
         else
         {
             selectedTags.add(tag);
-            btn.classList.add('active');
+            btn.classList.add('selected');
         }
         applyFilters();
     });
@@ -44,16 +44,16 @@ function applyFilters()
             return;
         }
 
-        const activeArray = [...selectedTags];
+        const selectedArray = [...selectedTags];
         let isVisible = false;
 
         if (strictMatchMode)
         {
-            isVisible = activeArray.every(t => photoCardTags.includes(t));
+            isVisible = selectedArray.every(t => photoCardTags.includes(t));
         }
         else
         {
-            isVisible = activeArray.some(t => photoCardTags.includes(t));
+            isVisible = selectedArray.some(t => photoCardTags.includes(t));
         }
 
         card.style.display = isVisible ? 'block' : 'none';
