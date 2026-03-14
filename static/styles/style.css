@@ -2,14 +2,17 @@ html {
     background: linear-gradient(
         to bottom,
         var(--bg-color-1, #ffffff),
-        var(--bg-color-2, #ffffff),
-        var(--bg-color-3, #ffffff)
+        var(--bg-color-2, #ffffff)
     );
 
     background-attachment: fixed;
 }
 
-.page-container {
+body::before {
+    filter: blur(20px);
+}
+
+.container {
     margin: 40px 4%;
 }
 
@@ -31,7 +34,7 @@ h1 {
     justify-content: center;
     gap: .4rem;
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.474), rgba(255, 255, 255, 0.221));
+    background: linear-gradient(to bottom, rgba(244, 202, 173, 0.211), rgba(63, 7, 74, 0.352));
     padding: 10px;
     border-radius: 5px;
 }
@@ -41,13 +44,13 @@ h1 {
     overflow: hidden;
     display: flex;
     
-    width: 200px;
-    height: 200px;
+    width: 188px;
+    height: 188px;
     /* min-width: 200px;
     max-width: 450px; */
 
-    border-radius: 4px;
-    box-shadow: 2px 2px 7px rgba(48, 24, 83, 0.299);
+    border-radius: 2px;
+    box-shadow: 2px 2px 7px rgba(48, 24, 83, 0.545);
 
     transition: transform 0.3s;
 }
@@ -58,7 +61,8 @@ h1 {
 }
 
 .carousel {
-    /* position: absolute; If variable image size */
+    /* If variable image size */
+    /* position: absolute; */
 
     display: flex;
     flex-direction: row;
@@ -118,7 +122,7 @@ h1 {
 .radio-buttons {
     position: absolute;
 
-    top: 172px;
+    top: 164px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -152,35 +156,35 @@ h1 {
     transform: translateX(0);
 }
 .photo-card:has(.radio-btn:nth-of-type(2):checked) .carousel {
-    transform: translateX(-200px);
+    transform: translateX(-188px);
 }
 .photo-card:has(.radio-btn:nth-of-type(3):checked) .carousel {
-    transform: translateX(-400px);
+    transform: translateX(-376px);
 }
 .photo-card:has(.radio-btn:nth-of-type(4):checked) .carousel {
-    transform: translateX(-600px);
+    transform: translateX(-564px);
 }
 .photo-card:has(.radio-btn:nth-of-type(5):checked) .carousel {
-    transform: translateX(-800px);
+    transform: translateX(-752px);
 }
 .photo-card:has(.radio-btn:nth-of-type(6):checked) .carousel {
-    transform: translateX(-1000px);
+    transform: translateX(-940px);
 }
 .photo-card:has(.radio-btn:nth-of-type(7):checked) .carousel {
-    transform: translateX(-1200px);
+    transform: translateX(-1128px);
 }
 .photo-card:has(.radio-btn:nth-of-type(8):checked) .carousel {
-    transform: translateX(-1400px);
+    transform: translateX(-1316px);
 }
 .photo-card:has(.radio-btn:nth-of-type(9):checked) .carousel {
-    transform: translateX(-800px);
+    transform: translateX(-1504px);
 }
 .photo-card:has(.radio-btn:nth-of-type(10):checked) .carousel {
-    transform: translateX(-900px);
+    transform: translateX(-1692px);
 }
 
 .photo-card:hover {
-    transform: scale(1.04);
+    transform: scale(1.045);
 }
 
 .photo-card:hover .carousel{

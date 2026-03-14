@@ -40,7 +40,7 @@ function applyFilters()
 
         if (selectedTags.size === 0)
         {
-            card.style.display = 'block'; // Show all if nothing is selected
+            card.style.display = 'flex'; // Show all if nothing is selected
             return;
         }
 
@@ -56,6 +56,6 @@ function applyFilters()
             isVisible = selectedArray.some(t => photoCardTags.includes(t));
         }
 
-        card.style.display = isVisible ? 'block' : 'none';
+        card.style.display = isVisible ? 'flex' : 'none';
     });
 }
