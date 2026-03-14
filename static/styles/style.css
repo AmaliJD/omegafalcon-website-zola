@@ -91,7 +91,7 @@
 .radio-buttons {
     position: absolute;
 
-    top: 175px;
+    top: 172px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -106,8 +106,8 @@
 
 .radio-buttons input[type="radio"] {
     appearance: none;
-    width: 40px;
-    height: 10px;
+    width: 45px;
+    height: 12px;
     opacity: 0.4;
     border: 1px solid rgb(166, 166, 166);
     border-radius: 10px;
