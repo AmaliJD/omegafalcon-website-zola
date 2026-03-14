@@ -6,14 +6,19 @@
 <h1 class="title">
     {{section.title}}
 </h1>
+
+<!-- TAG FILTERS -->
 <div id="tag-filter">
     {% set tags = get_taxonomy(kind="tags") %}
     {% for tag in tags.items %}
         <button class="tag-btn" data-tag="{{ tag.name }}">{{ tag.name }}</button>
     {% endfor %}
+    <button class="tag-btn" data-tag="misc">misc</button>
 
     <button id="filter-mode-btn" data-mode="OR">+</button>
 </div>
+
+<!-- GALLERY -->
 <div class="gallery">
     {% for artwork in section.pages %}
         {% set_global main_imgs = [] %}
@@ -25,24 +30,48 @@
                 {% set_global main_imgs = main_imgs | concat(with=asset) %}
             {% endif %}
         {% endfor %}
-        <div class="photocard"
-             data-tags="{% if artwork.taxonomies.tags %}{{ artwork.taxonomies.tags | join(sep=',') }}{% endif %}"
-             data-slug="{{ artwork.slug }}"
-             data-main-imgs="{{ main_imgs | json_encode() }}"
-             data-extra-imgs="{{ extra_imgs | json_encode() }}">
-            <a href="#{{ artwork.slug }}">
-                {% if artwork.assets %}
-                    {% set image = resize_image(path=main_imgs[0], width=250, height=200, op="fill", format="png", quality=80) %}
-                    <img src="{{ image.url }}" alt="{{ artwork.title }}">
-                {% endif %}
-                
-                <div class="overlay">
-                    <span class="art-title">{{ artwork.title }}</span>
+        <div class="photo-card"
+            data-tags="{% if artwork.taxonomies.tags %}{{ artwork.taxonomies.tags | join(sep=',') }}{% else %}{{ 'misc' }}{% endif %}"
+            data-slug="{{ artwork.slug }}"
+            data-main-imgs="{{ main_imgs | json_encode() }}"
+            data-extra-imgs="{{ extra_imgs | json_encode() }}">
+
+            <!-- LINK -->
+            <!-- <a href="#{{ artwork.slug }}" class="photo-card-link"></a> -->
+
+            <!-- REF IMAGE -->
+            <!-- <img src="{{ main_imgs[0] }}" class="ref-image" aria-hidden="true"> -->
+
+            <!-- PHOTO CAROUSEL -->
+            <div class="carousel">
+                {% for img_path in main_imgs %}
+                    {% set image = resize_image(path=img_path, width=200, height=200, op="fill", format="png") %}
+                    <img src="{{ image.url }}" alt="{{ artwork.title }}" class="carousel-image" decoding="async">
+                {% endfor %}
+            </div>
+
+            <!-- OVERLAY -->
+            <div class="overlay" onclick="gotoUrl(event, '#{{ artwork.slug }}', true)">
+                <span class="artwork-title">{{ artwork.title }}</span>
+                <span class="artwork-date">{{ artwork.date | date(format="%Y / %m / %d")}}</span>
+            </div>
+
+            <!-- RADIO BUTTONS -->
+            {% if main_imgs | length > 1 %}
+                <div class="radio-buttons">
+                    {% for img_path in main_imgs %}
+                        <input type="radio" 
+                            name="rad-{{ artwork.slug }}" 
+                            id="rad-{{ loop.index }}-{{ artwork.slug }}" 
+                            class="radio-btn"
+                            {% if loop.first %}checked{% endif %}>
+                    {% endfor %}
                 </div>
-            </a>
+            {% endif %}
         </div>
     {% endfor %}
 </div>
 
-<script src="{{ get_url(path="js/filter.js") }}"></script>
+<script src="{{ get_url(path="js/filter.js") | safe }}"></script>
+<script src="{{ get_url(path="js/utils.js") | safe }}"></script>
 {% endblock content %}

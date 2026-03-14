@@ -1,0 +1,169 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem;
+
+    /* background: linear-gradient(to bottom, rgba(255, 253, 248, 0.803), rgba(252, 242, 255, 0.525));
+    padding: 20px;
+    border-radius: 20px; */
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    
+    width: 200px;
+    height: 200px;
+    /* min-width: 200px;
+    max-width: 450px; */
+
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px rgba(48, 24, 83, 0.299);
+
+    transition: transform 0.3s;
+}
+
+.ref-image {
+    height: 100%;
+    visibility: hidden;
+}
+
+.carousel {
+    /* position: absolute; If variable image size */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    transition: filter 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s ease;
+    text-align: center;
+
+    z-index: 7;
+}
+
+.overlay .artwork-title {
+    max-width: 95%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    overflow-wrap: break-word;
+    margin-bottom: .25em;
+}
+
+.overlay .artwork-date {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    margin-top: 0;
+    opacity: .85;
+}
+
+.photo-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.radio-buttons {
+    position: absolute;
+
+    top: 175px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: 10;
+}
+
+.radio-buttons input[type="radio"] {
+    appearance: none;
+    width: 40px;
+    height: 10px;
+    opacity: 0.4;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.radio-buttons input[type="radio"]:checked {
+    opacity: 1;
+}
+
+.photo-card:has(.radio-btn:nth-of-type(1):checked) .carousel {
+    transform: translateX(0);
+}
+.photo-card:has(.radio-btn:nth-of-type(2):checked) .carousel {
+    transform: translateX(-200px);
+}
+.photo-card:has(.radio-btn:nth-of-type(3):checked) .carousel {
+    transform: translateX(-400px);
+}
+.photo-card:has(.radio-btn:nth-of-type(4):checked) .carousel {
+    transform: translateX(-600px);
+}
+.photo-card:has(.radio-btn:nth-of-type(5):checked) .carousel {
+    transform: translateX(-800px);
+}
+.photo-card:has(.radio-btn:nth-of-type(6):checked) .carousel {
+    transform: translateX(-1000px);
+}
+.photo-card:has(.radio-btn:nth-of-type(7):checked) .carousel {
+    transform: translateX(-1200px);
+}
+.photo-card:has(.radio-btn:nth-of-type(8):checked) .carousel {
+    transform: translateX(-1400px);
+}
+.photo-card:has(.radio-btn:nth-of-type(9):checked) .carousel {
+    transform: translateX(-800px);
+}
+.photo-card:has(.radio-btn:nth-of-type(10):checked) .carousel {
+    transform: translateX(-900px);
+}
+
+.photo-card:hover {
+    transform: scale(1.04);
+}
+
+.photo-card:hover .carousel{
+    filter: brightness(60%);
+}
+
+.photo-card:hover .overlay {
+    opacity: 1;
+}
+
+.photo-card:hover .radio-buttons{
+    opacity: 1;
+}

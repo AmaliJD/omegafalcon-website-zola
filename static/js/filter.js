@@ -1,6 +1,6 @@
 const tagButtons = document.querySelectorAll('.tag-btn');
 const modeButton = document.getElementById('filter-mode-btn');
-const photoCards = document.querySelectorAll('.photocard');
+const photoCards = document.querySelectorAll('.photo-card');
 
 let selectedTags = new Set();
 let strictMatchMode = false; // "AND" mode
