@@ -31,10 +31,6 @@
             {% endif %}
         {% endfor %}
 
-        <!-- {% set first_img = main_imgs[0] %}
-        {% set glow_img = resize_image(path=first_img, width=50, height=50, op="fill", format="png") %}
-        <div class="glow" style="--glow-img: url('{{ glow_img.url }}');"></div> -->
-        
         <div class="photo-card"
             data-tags="{% if artwork.taxonomies.tags %}{{ artwork.taxonomies.tags | join(sep=',') }}{% else %}{{ 'misc' }}{% endif %}"
             data-slug="{{ artwork.slug }}"
@@ -76,6 +72,8 @@
         </div>
     {% endfor %}
 </div>
+
+<!-- DEBUG TEXT -->
 <span class="debug-text"
 style="
     position: absolute;
