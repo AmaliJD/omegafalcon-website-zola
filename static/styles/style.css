@@ -8,10 +8,6 @@ html {
     background-attachment: fixed;
 }
 
-body::before {
-    filter: blur(20px);
-}
-
 .container {
     margin: 40px 4%;
 }
@@ -32,6 +28,9 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 180px; */
     gap: .4rem;
 
     background: linear-gradient(to bottom, rgba(244, 202, 173, 0.211), rgba(63, 7, 74, 0.352));
@@ -43,6 +42,7 @@ h1 {
     position: relative;
     overflow: hidden;
     display: flex;
+    /* flex-grow: 1; */
     
     width: 188px;
     height: 188px;
@@ -55,6 +55,11 @@ h1 {
     transition: transform 0.3s;
 }
 
+.photo-card.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
 .ref-image {
     height: 100%;
     visibility: hidden;
@@ -63,6 +68,8 @@ h1 {
 .carousel {
     /* If variable image size */
     /* position: absolute; */
+    /* width: 100%;
+    height: 100%; */
 
     display: flex;
     flex-direction: row;

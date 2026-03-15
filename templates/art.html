@@ -30,6 +30,13 @@
                 {% set_global main_imgs = main_imgs | concat(with=asset) %}
             {% endif %}
         {% endfor %}
+        <!-- {% set first_img = main_imgs[0] %}
+        {% set first_img_resized = resize_image(path=first_img, height=188, op="fit_height", format="png") %}
+        {% set meta = get_image_metadata(path=first_img) %}
+        {% set aspect_ratio = meta.width / meta.height %} -->
+        <!-- <div class="photo-card {% if loop.index0 % 15 == 6 %}featured{% endif %}" -->
+        <!-- <div class="photo-card"
+            style="flex-grow: {{ aspect_ratio }}; flex-basis: {{ first_img_resized.width }}px;" -->
         <div class="photo-card"
             data-tags="{% if artwork.taxonomies.tags %}{{ artwork.taxonomies.tags | join(sep=',') }}{% else %}{{ 'misc' }}{% endif %}"
             data-slug="{{ artwork.slug }}"
