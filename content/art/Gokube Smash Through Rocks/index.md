@@ -1,6 +1,6 @@
 +++
-date = 2023-12-17
-title = "GD Legends Gang"
+date = 2023-11-11
+title = "Gokube Smash Through Rocks"
 tagline = ""
 
 [taxonomies]

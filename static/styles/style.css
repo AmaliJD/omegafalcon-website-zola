@@ -3,7 +3,8 @@ html {
         to bottom,
         var(--bg-color-1, #ffffff),
         var(--bg-color-2, #ffffff)
-    );
+    ),
+    url("https://grainy-gradients.vercel.app/noise.svg");
 
     background-attachment: fixed;
 }
@@ -25,6 +26,7 @@ h1 {
 }
 
 .gallery {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,7 +35,7 @@ h1 {
     grid-auto-rows: 180px; */
     gap: .4rem;
 
-    background: linear-gradient(to bottom, rgba(57, 28, 6, 0.215), rgba(23, 6, 67, 0.632));
+    background: linear-gradient(to bottom, rgba(80, 40, 10, 0.137), rgba(23, 6, 67, 0.632));
     padding: 10px;
     border-radius: 5px;
 }
@@ -50,7 +52,7 @@ h1 {
     max-width: 450px; */
 
     border-radius: 2px;
-    box-shadow: 2px 2px 7px rgba(48, 24, 83, 0.545);
+    box-shadow: 2px 2px 7px rgba(41, 16, 68, 0.445);
 
     transition: transform 0.3s;
 }

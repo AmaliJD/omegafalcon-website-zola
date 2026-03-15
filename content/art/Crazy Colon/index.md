@@ -1,6 +1,6 @@
 +++
-date = 2023-12-17
-title = "GD Legends Gang"
+date = 2023-10-31
+title = "Crazy Colon"
 tagline = ""
 
 [taxonomies]

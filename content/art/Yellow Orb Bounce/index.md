@@ -1,6 +1,6 @@
 +++
-date = 2023-12-17
-title = "GD Legends Gang"
+date = 2023-10-26
+title = "Yellow Orb Bounce"
 tagline = ""
 
 [taxonomies]

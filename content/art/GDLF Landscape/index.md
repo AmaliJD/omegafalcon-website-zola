@@ -1,6 +1,6 @@
 +++
-date = 2023-12-17
-title = "GD Legends Gang"
+date = 2020-09-30
+title = "GDLF Landscape"
 tagline = ""
 
 [taxonomies]

@@ -7,7 +7,7 @@
     color: var(--text-color, #000000);
     
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
 
     box-shadow: 3px 3px 0px rgba(130, 48, 37, 0.333);
 
