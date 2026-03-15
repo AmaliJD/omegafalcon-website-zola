@@ -76,6 +76,18 @@
         </div>
     {% endfor %}
 </div>
+<span class="debug-text"
+style="
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--text-color, #ffffff);
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: bold;">
+    {% set count = section.pages | length %}
+    Total Entries: {{ count }}
+</span>
 
 <script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 <script src="{{ get_url(path="js/utils.js") | safe }}"></script>
