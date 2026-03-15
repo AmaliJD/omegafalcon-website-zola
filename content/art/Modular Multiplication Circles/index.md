@@ -1,6 +1,6 @@
 +++
 date = 2021-04-17
-title = "Modular Multipplication Circles"
+title = "Modular Multiplication Circles"
 tagline = ""
 
 [taxonomies]
