@@ -9,14 +9,32 @@ html {
     background-attachment: fixed;
 }
 
+body {
+    font-family: var(--font-main);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    font-weight: 700;
+}
+
 .container {
     margin: 40px 4%;
 }
 
 h1 {
     font-size: 80px;
-    font-weight: 800;
-    font-family: sans-serif;
+    font-weight: 900;
     text-decoration: underline;
     color: var(--text-color, #000000)
 }
@@ -52,7 +70,7 @@ h1 {
     max-width: 450px; */
 
     border-radius: 2px;
-    box-shadow: 2px 2px 7px rgba(41, 16, 68, 0.445);
+    box-shadow: 2px 2px 7px rgba(41, 16, 68, 0.493);
 
     transition: transform 0.3s;
 }
@@ -105,16 +123,17 @@ h1 {
 
 .overlay .artwork-title {
     max-width: 95%;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    font-family: sans-serif;
+    line-height: 1.1;
+    /* font-family: sans-serif; */
     overflow-wrap: break-word;
     margin-bottom: .25em;
 }
 
 .overlay .artwork-date {
     font-size: 0.9rem;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     margin-top: 0;
     opacity: .85;
 }

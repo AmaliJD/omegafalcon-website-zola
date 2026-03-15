@@ -12,8 +12,9 @@
     box-shadow: 3px 3px 0px rgba(130, 48, 37, 0.333);
 
     font-size: 20px;
-    font-weight: 550;
-    padding: 6px 15px;
+    /* font-weight: 550; */
+    /* padding: 6px 15px; */
+    padding: 4px 15px;
 
     transition: color 0.15s, background-color 0.15s, transform 0.18s ease, scale 0.3s, rotate 0.15s, box-shadow 0.15s, border-color .15s;
     margin-right: 8px;
@@ -43,7 +44,8 @@
 /* UNION */
 .tag-filter button#union-btn {
     font-size: 20px;
-    font-weight: 550;
+    /* font-weight: 550; */
+    font-family: sans-serif;
     padding: 4px 10px;
     border: solid;
     border-color: transparent;
