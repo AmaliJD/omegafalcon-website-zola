@@ -33,7 +33,7 @@ h1 {
     grid-auto-rows: 180px; */
     gap: .4rem;
 
-    background: linear-gradient(to bottom, rgba(244, 202, 173, 0.211), rgba(63, 7, 74, 0.352));
+    background: linear-gradient(to bottom, rgba(57, 28, 6, 0.215), rgba(23, 6, 67, 0.632));
     padding: 10px;
     border-radius: 5px;
 }
