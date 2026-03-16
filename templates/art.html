@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block links %}
+<link rel="stylesheet" href="{{ get_url(path='styles/art.css') }}">
+{% endblock links %}
+
 {% block title %}OmegaFalcon: Art{% endblock title %}
 
 {% block content %}
@@ -7,8 +11,11 @@
     {{section.title}}
 </h1>
 
+<!-- BG IMAGES -->
+ <!-- <img src="{{ get_url(path='images/GDLF Landscape.png') | safe }}" class="bg-image" decoding="async"> -->
+
 <!-- TAG FILTERS -->
-<div class="tag-filter">
+<div class="tag-filter">    
     {% set tags = get_taxonomy(kind="tags") %}
     {% for tag in tags.items %}
         <button class="tag-btn" data-tag="{{ tag.name }}">{{ tag.name }}</button>

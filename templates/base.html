@@ -9,20 +9,24 @@
     <link rel="icon" type="image/png" href="{{ get_url(path="images/icon4.png") | safe }}?v=0">
     <link rel="stylesheet" href="{{ get_url(path='styles/style.css') }}">
     <link rel="stylesheet" href="{{ get_url(path='styles/tag_filter.css') }}">
+    {% block links %}
+    {% endblock links %}
 
+    
     {% set pageType = page | default(value=section) %}
-    {% if pageType.extra.colors %}
     <style>
         :root {
             --font-main: "Open Sans", sans-serif;
             --font-heading: "REM", sans-serif;
 
-            {% for key, value in pageType.extra.colors %}
-                --{{ key | replace(from="_", to="-") }}: {{ value }};
-            {% endfor %}
+            {% if pageType.extra.colors %}
+                {% for key, value in pageType.extra.colors %}
+                    --{{ key | replace(from="_", to="-") }}: {{ value }};
+                {% endfor %}
+            {% endif %}
         }
     </style>
-    {% endif %}
+    
     <title>
         {% block title %}
         OmegaFalcon

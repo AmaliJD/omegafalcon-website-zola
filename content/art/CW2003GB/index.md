@@ -1,6 +1,6 @@
 +++
 date = 2023-10-02
-title = "CW2003GB The Haxxor"
+title = "CW2003GB"
 tagline = ""
 
 [taxonomies]
