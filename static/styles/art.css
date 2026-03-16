@@ -9,7 +9,7 @@
     gap: .4rem;
 
     background: linear-gradient(
-        172deg,
+        172deg in oklab,
         rgba(104, 54, 16, 0.1),
         rgba(57, 26, 78, 0.315),
         rgba(17, 5, 70, 0.637));
