@@ -1,7 +1,7 @@
 document.querySelectorAll('.strip-icon').forEach(img => {
         img.addEventListener('click', () => {
             // Prevent restarting mid-spin if you want, or just re-add
-            var rand = Math.random() * 3;
+            var rand = Math.random() * 4;
             if (rand <= 1)
             {
                 img.classList.add('is-spinning');
@@ -14,6 +14,10 @@ document.querySelectorAll('.strip-icon').forEach(img => {
             {
                 img.classList.add('is-hopping');
             }
+            else if (rand <= 4)
+            {
+                img.classList.add('is-squishing');
+            }
         });
 
         // Remove the class once the 360 rotation is done
@@ -21,5 +25,6 @@ document.querySelectorAll('.strip-icon').forEach(img => {
             img.classList.remove('is-spinning');
             img.classList.remove('is-pulsing');
             img.classList.remove('is-hopping');
+            img.classList.remove('is-squishing');
         });
     });
