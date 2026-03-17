@@ -10,5 +10,13 @@
 </head>
 <body>
     <p>Redirecting to <a href="/art/#{{ page.slug }}">art/#{{ page.slug }}</a>...</p>
+    <div id="data-container">
+        {{ page.content | safe }}
+    </div>
+    <div id="image-paths">
+        {% for asset in page.assets %}
+            <span data-path="{{ get_url(path=asset) }}"></span>
+        {% endfor %}
+    </div>
 </body>
 </html>
