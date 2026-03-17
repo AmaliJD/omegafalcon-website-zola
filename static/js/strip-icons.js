@@ -1,5 +1,5 @@
 document.querySelectorAll('.strip-icon').forEach(img => {
-        img.addEventListener('mousedown', () => {
+        img.addEventListener('pointerdown', () => {
             img.classList.remove('is-fading');
             // Prevent restarting mid-spin if you want, or just re-add
             var rand = Math.random() * 4;
