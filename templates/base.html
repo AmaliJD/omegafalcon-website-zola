@@ -39,14 +39,27 @@
         <svg class="strip" preserveAspectRatio="none" viewBox="0 0 100 1">
             <rect width="100" height="1" fill="#ffffff" fill-opacity=".9" />
         </svg>
-        {% set img1 = resize_image(path="/images/GDLF Stickers/Omega.png", width=50, height=50, op="fill", format="png") %}
-        <img src="{{ img1.url }}" class="strip-icon" decoding="async" draggable="false" style="right: 130px">
-        {% set img2 = resize_image(path="/images/GDLF Stickers/Gokube.png", width=50, height=50, op="fill", format="png") %}
-        <img src="{{ img2.url }}" class="strip-icon" decoding="async" draggable="false" style="right: 90px">
-        {% set img3 = resize_image(path="/images/GDLF Stickers/Ace.png", width=50, height=50, op="fill", format="png") %}
-        <img src="{{ img3.url }}" class="strip-icon" decoding="async" draggable="false" style="right: 50px">
-        {% set img4 = resize_image(path="/images/GDLF Stickers/Snow.png", width=50, height=50, op="fill", format="png") %}
-        <img src="{{ img4.url }}" class="strip-icon" decoding="async" draggable="false" style="right: 10px">
+        {% set icon0 = resize_image(path="/images/GDLF Stickers/Omega.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon1 = resize_image(path="/images/GDLF Stickers/Gokube.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon2 = resize_image(path="/images/GDLF Stickers/Ace.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon3 = resize_image(path="/images/GDLF Stickers/Snow.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon4 = resize_image(path="/images/GDLF Stickers/Hacker.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon5 = resize_image(path="/images/GDLF Stickers/Coke.png", width=50, height=50, op="fill", format="png") %}
+        {% set icon6 = resize_image(path="/images/GDLF Stickers/BT.png", width=50, height=50, op="fill", format="png") %}
+        <img src="{{ icon0.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 130px; --delay: 0s">
+        <img src="{{ icon1.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 90px; --delay: 0.2s">
+        <img src="{{ icon2.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 50px; --delay: 0.4s">
+        <img src="{{ icon3.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 10px; --delay: 0.6s">
+        <script>
+            const iconList = [
+                "{{ icon1.url | safe }}",
+                "{{ icon2.url | safe }}",
+                "{{ icon3.url | safe }}",
+                "{{ icon4.url | safe }}",
+                "{{ icon5.url | safe }}",
+                "{{ icon6.url | safe }}",
+            ];
+        </script>
         <div class="container">
             {% block content %}
             {% endblock content %}
@@ -54,4 +67,4 @@
     </section>
 </body>
 
-<script src="{{ get_url(path="js/strip-images.js") | safe }}"></script>
+<script src="{{ get_url(path="js/strip-icons.js") | safe }}"></script>

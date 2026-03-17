@@ -3,8 +3,8 @@ title = "OmegaFalcon"
 template = "index.html"
 
 [extra.colors]
-bg_color_1 = "#ffffffff"
-bg_color_2 = "#b5aba3ff"
-text_color = "#48291eff"
+bg_color_1 = "#fff9feff"
+bg_color_2 = "#dfad95ff"
+text_color = "#ffffffff"
 btn_color = "#fffcfaff"
 +++
