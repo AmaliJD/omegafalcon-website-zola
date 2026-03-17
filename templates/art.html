@@ -2,6 +2,7 @@
 
 {% block links %}
 <link rel="stylesheet" href="{{ get_url(path='styles/art.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='styles/art-overlay.css') }}">
 {% endblock links %}
 
 {% block title %}OmegaFalcon: Art{% endblock title %}
@@ -93,6 +94,17 @@ style="
     {% set count = section.pages | length %}
     Total Entries: {{ count }}
 </span>
+
+<div class="lightbox-container">
+    <!-- <button id="close-overlay" onclick="window.location.hash=''">&times;</button> -->
+    <div class="lightbox-content">
+        <div class="lightbox-left">
+        </div>
+
+        <div class="lightbox-right" id="markdown-content">
+        </div>
+    </div>
+</div>
 
 <script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 <script src="{{ get_url(path="js/utils.js") | safe }}"></script>

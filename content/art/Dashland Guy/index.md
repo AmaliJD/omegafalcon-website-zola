@@ -1,6 +1,8 @@
 +++
 date = 2025-08-01
 title = "Dashland Guy"
+
+[extra]
 tagline = ""
 
 [taxonomies]
