@@ -82,6 +82,7 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-heading);
+    color: var(--text-color, #000000)
 }
 
 button,
@@ -99,7 +100,16 @@ h1 {
     font-size: 80px;
     font-weight: bold;
     text-decoration: underline;
-    color: var(--text-color, #000000)
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .title {

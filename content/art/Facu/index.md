@@ -9,4 +9,4 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-Drawing of my boi Facu28's GD icon
+Drawing of legendary speedrunner Facu28's GD icon

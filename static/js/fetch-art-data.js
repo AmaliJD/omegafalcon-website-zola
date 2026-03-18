@@ -1,4 +1,5 @@
-const markdownElement = document.getElementById('markdown-content');
+const markdownContent = document.getElementById('markdown-content');
+const lightboxCarousel = document.getElementById('lightbox-carousel');
 
 async function fetchArtData()
 {
@@ -30,6 +31,9 @@ async function fetchArtData()
         // 2. Get all Asset paths
         const assetSpans = doc.querySelectorAll('#image-paths span');
         const assetUrls = Array.from(assetSpans).map(span => span.dataset.path);
+        const mainImages = assetUrls.filter(url => !url.includes(`extras`)); 
+        const extraImages = assetUrls.filter(url => url.includes(`extras`));
+        const sortedImages = [...mainImages, ...extraImages];
 
         const title = doc.getElementById('frontmatter-title').innerHTML;
         const date = doc.getElementById('frontmatter-date').innerHTML;
@@ -38,10 +42,10 @@ async function fetchArtData()
         // --- CONSOLE LOG ---
         console.group(`Results for ${slug}`);
         console.log("Converted Markdown HTML:", markdownHtml.trim());
-        console.log("Found Assets:", assetUrls);
+        console.log("Found Assets:", sortedImages);
         console.groupEnd();
 
-        injectArtData(title, date, tagline,markdownHtml.trim(), assetUrls);
+        injectArtData(title, date, tagline,markdownHtml.trim(), sortedImages);
 
     }
     catch (err)
@@ -57,33 +61,45 @@ window.addEventListener('hashchange', fetchArtData);
 // Run once on load in case you refresh with a hash already there
 window.addEventListener('DOMContentLoaded', fetchArtData);
 
-function injectArtData(title, date, tagline, markdownHtml, assetUrls)
+function injectArtData(title, date, tagline, markdownHtml, images)
 {
-    if (markdownElement)
-    {
-        // markdownElement.innerHTML = "";
-        // markdownElement.innerHTML += title;
-        // markdownElement.innerHTML += date;
-        // markdownElement.innerHTML += tagline;
+    const mdHTML = `
+        <div class="text-header">
+            <h3>${title}</h3>
+            <p class="tagline" style="font-style: italic;">${tagline}</p>
+        </div>
+        
+        <div class="text-body">
+            ${markdownHtml} 
+        </div>
+        
+        <div class="text-footer">
+            <p>Created: ${date}</p>
+        </div>
+    `;
+    markdownContent.innerHTML = mdHTML;
 
-        const fullContent = `
-            <div class="text-header">
-                <h2>${title}</h2>
-                <p class="tagline">${tagline}</p>
-            </div>
-            
-            <div class="text-body">
-                ${markdownHtml} 
-            </div>
-            
-            <div class="text-footer">
-                <p>Created: ${date}</p>
-            </div>
-        `;
-        markdownElement.innerHTML = fullContent;
-    }
-    else
-    {
-        console.error("Markdown content element not found!");
-    }
+    lightboxCarousel.innerHTML = "";
+    images.forEach((url, index) => {
+        const img = document.createElement('img');
+        img.src = decodeURIComponent(url);
+        img.className = 'lightbox-carousel-img';
+        
+        lightboxCarousel.appendChild(img);
+    });
+    // const carouselHTML = `
+    //     <div class="text-header">
+    //         <h3>${title}</h3>
+    //         <p class="tagline" style="font-style: italic;">${tagline}</p>
+    //     </div>
+        
+    //     <div class="text-body">
+    //         ${markdownHtml} 
+    //     </div>
+        
+    //     <div class="text-footer">
+    //         <p>Created: ${date}</p>
+    //     </div>
+    // `;
+    // lightboxCarousel.innerHTML = carouselHTML;
 }
