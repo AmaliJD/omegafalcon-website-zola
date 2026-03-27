@@ -27,7 +27,7 @@
 </div>
 
 <!-- GALLERY -->
-<div class="gallery">
+<div class="gallery" id="gallery">
     {% for artwork in section.pages %}
         {% set_global main_imgs = [] %}
         {% set_global extra_imgs = [] %}
@@ -95,8 +95,7 @@ style="
     Total Entries: {{ count }}
 </span>
 
-<div class="lightbox-container">
-    <!-- <button id="close-overlay" onclick="window.location.hash=''">&times;</button> -->
+<!-- <div class="lightbox-container">
     <div class="lightbox-content">
         <div class="lightbox-left" id="lightbox-carousel">
         </div>
@@ -104,7 +103,7 @@ style="
         <div class="lightbox-right" id="markdown-content">
         </div>
     </div>
-</div>
+</div> -->
 
 <script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 <script src="{{ get_url(path="js/utils.js") | safe }}"></script>

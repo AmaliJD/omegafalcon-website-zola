@@ -1,5 +1,6 @@
 const markdownContent = document.getElementById('markdown-content');
 const lightboxCarousel = document.getElementById('lightbox-carousel');
+const mainPage = document.getElementById('main-page');
 
 async function fetchArtData()
 {
@@ -18,6 +19,10 @@ async function fetchArtData()
         {
             throw new Error(`data at /art/${slug}/ does not exist.`);
         }
+
+        mainPage.classList.add('frozen');
+        // document.body.style.overflow = 'hidden'; 
+        // document.body.style.height = '100vh';
 
         const rawHtml = await response.text();
 
@@ -84,22 +89,8 @@ function injectArtData(title, date, tagline, markdownHtml, images)
         const img = document.createElement('img');
         img.src = decodeURIComponent(url);
         img.className = 'lightbox-carousel-img';
+        img.loading = 'lazy';
         
         lightboxCarousel.appendChild(img);
     });
-    // const carouselHTML = `
-    //     <div class="text-header">
-    //         <h3>${title}</h3>
-    //         <p class="tagline" style="font-style: italic;">${tagline}</p>
-    //     </div>
-        
-    //     <div class="text-body">
-    //         ${markdownHtml} 
-    //     </div>
-        
-    //     <div class="text-footer">
-    //         <p>Created: ${date}</p>
-    //     </div>
-    // `;
-    // lightboxCarousel.innerHTML = carouselHTML;
 }
