@@ -1,6 +1,6 @@
 const markdownContent = document.getElementById('markdown-content');
 const lightboxCarousel = document.getElementById('lightbox-carousel');
-const mainPage = document.getElementById('main-page');
+const lightboxContainer = document.querySelector('.lightbox-container');
 
 async function fetchArtData()
 {
@@ -8,7 +8,8 @@ async function fetchArtData()
     
     if (!slug) {
         console.log("home page art/");
-        document.querySelector('.lightbox-container').classList.remove('active');
+        
+        lightboxContainer.classList.remove('active');
         unlockScroll();
         return;
     }
@@ -22,8 +23,7 @@ async function fetchArtData()
             throw new Error(`data at /art/${slug}/ does not exist.`);
         }
 
-        document.querySelector('.lightbox-container').classList.add('active');
-
+        lightboxContainer.classList.add('active');
         lockScroll();
 
         const rawHtml = await response.text();
