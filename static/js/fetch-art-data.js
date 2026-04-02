@@ -8,6 +8,8 @@ async function fetchArtData()
     
     if (!slug) {
         console.log("home page art/");
+        document.querySelector('.lightbox-container').classList.remove('active');
+        unlockScroll();
         return;
     }
 
@@ -20,9 +22,9 @@ async function fetchArtData()
             throw new Error(`data at /art/${slug}/ does not exist.`);
         }
 
-        mainPage.classList.add('frozen');
-        // document.body.style.overflow = 'hidden'; 
-        // document.body.style.height = '100vh';
+        document.querySelector('.lightbox-container').classList.add('active');
+
+        lockScroll();
 
         const rawHtml = await response.text();
 
@@ -31,7 +33,7 @@ async function fetchArtData()
         const doc = parser.parseFromString(rawHtml, 'text/html');
 
         // 1. Get the Markdown Content (rendered as HTML)
-        const markdownHtml = doc.getElementById('marktown-text').innerHTML;
+        const markdownHtml = doc.getElementById('markdown-text').innerHTML;
 
         // 2. Get all Asset paths
         const assetSpans = doc.querySelectorAll('#image-paths span');
@@ -73,13 +75,13 @@ function injectArtData(title, date, tagline, markdownHtml, images)
             <h3>${title}</h3>
             <p class="tagline" style="font-style: italic;">${tagline}</p>
         </div>
+
+        <div class="text-footer">
+            <p>Created: ${date}</p>
+        </div>
         
         <div class="text-body">
             ${markdownHtml} 
-        </div>
-        
-        <div class="text-footer">
-            <p>Created: ${date}</p>
         </div>
     `;
     markdownContent.innerHTML = mdHTML;

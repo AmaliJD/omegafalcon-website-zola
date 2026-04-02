@@ -1,51 +1,90 @@
-.frozen {
-    filter: blur(10px) brightness(0.4);
-    pointer-events: none;
-    user-select: none;
-    transition: filter 0.3s ease;
+.no-scroll {
+    overflow: hidden;
+    /* height: 100vh; */
 }
 
 .lightbox-container {
     position: fixed;
-    opacity: 1;
+    width: 100vw;
+    height: 100vh;
     inset: 0;
 
-    background: radial-gradient(circle at center, rgba(20, 20, 20, 0.5) 0%, rgba(10, 10, 10, 1) 100%);
-    /* background: rgba(0, 0, 0, 0.55); */
-    /* backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     z-index: 10;
+
+    background: linear-gradient(
+        in oklab,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(13, 13, 13, 0.7) 20%,
+        rgba(34, 34, 34, 0.9) 50%,
+        rgba(18, 14, 16, 0.98) 100%);
+
+    /* background: radial-gradient(circle at center, rgba(20, 20, 20, 0.5) 0%, rgba(10, 10, 10, 1) 100%); */
+    
+    /* background: rgba(0, 0, 0, 0.9); */
+
+    /* background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png"); */
+    
+    backdrop-filter: blur(5px) saturate(80%);
+    -webkit-backdrop-filter: saturate(80%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.ZZZlightbox-container::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+.lightbox-container.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: row;
     
-    will-change: backdrop-filter; 
-    z-index: -1; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    align-items: stretch; 
 }
 
 .lightbox-left {
-    flex: 1;
+    flex: 4;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #000; */
+
+    overflow: hidden;
+
+    color: #eee;
+
     position: relative;
 }
 
 .lightbox-right {
-    flex: 1;
-    height: 100%;
-    padding: 40px;
+    flex: 5;
+
     overflow-y: auto;
-    /* background: #151515; */
+
+    /* background: #ffffff1b; */
     color: #eee;
-    line-height: 1.6;
+}
+
+#lightbox-carousel {
+    
+}
+
+#markdown-content {
+    padding: 100px;
+    line-height: 1.8;
+}
+
+#markdown-content h1, #markdown-content h2, #markdown-content h3 {
+    color: #eee;
 }

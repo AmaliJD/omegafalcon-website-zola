@@ -4,7 +4,7 @@
     <meta name="robots" content="noindex, nofollow">
     <script>
         // Redirect the user back to the gallery with the hash
-        // Example: /gallery/my-artwork/ -> /gallery/#my-artwork
+        // Example: /art/artwork/ -> /art/#artwork/
         window.location.replace("/art/#{{ page.slug }}");
     </script>
 </head>
@@ -12,10 +12,10 @@
     <p>Redirecting to <a href="/art/#{{ page.slug }}">art/#{{ page.slug }}</a>...</p>
     <div id="frontmatter">
         <h1 id="frontmatter-title">{{ page.title }}</h1>
-        <span id="frontmatter-date">{{ page.date | date(format="%d %b '%y") }}</span>
+        <span id="frontmatter-date">{{ page.date | date(format="%b %d, %Y") }}</span>
         <span id="frontmatter-tagline">{{ page.extra.tagline }}</span>
     </div>
-    <div id="marktown-text">
+    <div id="markdown-text">
         {{ page.content | safe }}
     </div>
     <div id="image-paths">

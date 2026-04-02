@@ -62,7 +62,7 @@
             <!-- OVERLAY -->
             <div class="overlay" onclick="gotoUrl(event, '#{{ artwork.slug }}', true)">
                 <span class="artwork-title">{{ artwork.title }}</span>
-                <span class="artwork-date">{{ artwork.date | date(format="%Y / %m / %d")}}</span>
+                <span class="artwork-date">{{ artwork.date | date(format="%b %d, %Y")}}</span>
             </div>
 
             <!-- RADIO BUTTONS -->
@@ -95,17 +95,24 @@ style="
     Total Entries: {{ count }}
 </span>
 
-<!-- <div class="lightbox-container">
+<!-- OVERLAY -->
+<div class="lightbox-container">
     <div class="lightbox-content">
-        <div class="lightbox-left" id="lightbox-carousel">
+        <div class="lightbox-left">
+            <div id="lightbox-carousel">
+                
+            </div>
         </div>
-
-        <div class="lightbox-right" id="markdown-content">
+        <div class="lightbox-right">
+            <div id="markdown-content">
+                
+            </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 <script src="{{ get_url(path="js/utils.js") | safe }}"></script>
 <script src="{{ get_url(path="js/fetch-art-data.js") | safe }}"></script>
+<script src="{{ get_url(path="js/scroll-lock.js") | safe }}"></script>
 {% endblock content %}
