@@ -73,11 +73,11 @@ function injectArtData(title, date, tagline, markdownHtml, images)
     const mdHTML = `
         <div class="text-header">
             <h3>${title}</h3>
-            <p class="tagline" style="font-style: italic;">${tagline}</p>
+            <p class="text-tagline" style="font-style: italic;">${tagline}</p>
         </div>
 
-        <div class="text-footer">
-            <p>Created: ${date}</p>
+        <div class="text-date">
+            <p>${date}</p>
         </div>
         
         <div class="text-body">
@@ -138,3 +138,14 @@ function updateButtonVisibility() {
         nextBtn.classList.add('is-hidden');
     }
 }
+
+// lightboxContainer.addEventListener('click', (e) => {
+//     const isInsideContent = e.target.closest('.lightbox-carousel') || 
+//                             e.target.closest('.markdown-content');
+
+//     console.log("Clicked element:", e.target);
+
+//     if (!isInsideContent) {
+//         window.location.hash = '';
+//     }
+// });

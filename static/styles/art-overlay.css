@@ -115,7 +115,7 @@
 
 #markdown-content {
     padding-right: 10%;
-    padding-left: 8%;
+    padding-left: 4%;
     padding-top: 12.8vh;
     line-height: 1.8;
 }
@@ -123,6 +123,25 @@
 #markdown-content h1, #markdown-content h2, #markdown-content h3 {
     color: #eee;
 }
+
+.text-header {
+    
+}
+
+.text-tagline {
+    margin-top: -2em;
+}
+
+.text-date {
+    margin-top: -.5em;
+    font-size: small;
+    color: #eeeeeec6
+}
+
+.text-body {
+    margin-top: 2em;
+}
+
 
 .carousel-button {
     position: absolute;
