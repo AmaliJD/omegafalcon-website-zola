@@ -8,7 +8,7 @@ async function fetchArtData()
     
     if (!slug) {
         console.log("home page art/");
-        
+
         lightboxContainer.classList.remove('active');
         unlockScroll();
         return;
@@ -95,4 +95,46 @@ function injectArtData(title, date, tagline, markdownHtml, images)
         
         lightboxCarousel.appendChild(img);
     });
+
+    currentImgIndex = 0;
+    lightboxCarousel.style.setProperty('--offset', 0);
+    updateButtonVisibility();
+}
+
+let currentImgIndex = 0;
+
+function moveCarousel(direction) {
+    const totalImages = lightboxCarousel.children.length;
+
+    // Update and clamp the index
+    currentImgIndex = Math.max(0, Math.min(currentImgIndex + direction, totalImages - 1));
+
+    // We set the variable on the CAROUSEL, but the IMAGES use it to move
+    lightboxCarousel.style.setProperty('--offset', currentImgIndex);
+
+    updateButtonVisibility();
+}
+
+function updateButtonVisibility() {
+    const totalImages = lightboxCarousel.children.length;
+    
+    const prevBtn = document.querySelector('.carousel-button.prev');
+    const nextBtn = document.querySelector('.carousel-button.next');
+
+    if (totalImages <= 1) {
+        prevBtn.classList.add('is-hidden');
+        nextBtn.classList.add('is-hidden');
+        return;
+    }
+
+    prevBtn.classList.remove('is-hidden');
+    nextBtn.classList.remove('is-hidden');
+    if (currentImgIndex === 0)
+    {
+        prevBtn.classList.add('is-hidden');
+    }
+    else if (currentImgIndex === totalImages - 1)
+    {
+        nextBtn.classList.add('is-hidden');
+    }
 }
