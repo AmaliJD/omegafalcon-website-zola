@@ -177,3 +177,33 @@
     visibility: hidden;
     pointer-events: none;
 }
+
+.lightbox-back-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 120px;
+    opacity: 0;
+
+    transition: opacity 0.2s;
+    pointer-events: auto;
+}
+
+.lightbox-back-bar:hover {
+    opacity: 1;
+}
+
+.bar-gradient {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bar-arrow {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 20px;
+    position: fixed;
+}

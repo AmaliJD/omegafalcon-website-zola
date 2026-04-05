@@ -139,6 +139,12 @@ function updateButtonVisibility() {
     }
 }
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        window.location.hash = '';
+    }
+});
+
 // lightboxContainer.addEventListener('click', (e) => {
 //     const isInsideContent = e.target.closest('.lightbox-carousel') || 
 //                             e.target.closest('.markdown-content');
