@@ -88,12 +88,32 @@ function injectArtData(title, date, tagline, markdownHtml, images)
 
     lightboxCarousel.innerHTML = "";
     images.forEach((url, index) => {
-        const img = document.createElement('img');
-        img.src = decodeURIComponent(url);
-        img.className = 'lightbox-carousel-img';
-        img.loading = 'lazy';
+        // const decodedUrl = decodeURIComponent(url);
+        const isVideo = url.toLowerCase().endsWith('.mp4');
+        let element;
+
+        if (isVideo) {
+            element = document.createElement('video');
+            element.src = url;
+            element.autoplay = true;
+            element.loop = true;
+            element.muted = true;
+            element.playsInline = true;
+            element.setAttribute('preload', 'auto'); 
+        } else {
+            element = document.createElement('img');
+            element.src = url;
+            element.loading = 'lazy';
+        }
+
+        element.className = 'lightbox-carousel-img';
+
+        // const img = document.createElement('img');
+        // img.src = decodeURIComponent(url);
+        // img.className = 'lightbox-carousel-img';
+        // img.loading = 'lazy';
         
-        lightboxCarousel.appendChild(img);
+        lightboxCarousel.appendChild(element);
     });
 
     currentImgIndex = 0;

@@ -9,6 +9,6 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-Concept art of a scene I had planned for GD Legends Season 2 Episode 1.
+Concept art of a scene I had planned for GD Legends Season 2, Episode 1.
 In this scene, the villain "Fleckeri" is attacking Cokeplayz, one of the
-heroes in the original GDL episode 1 animation.
+heroes from the very first episode.
