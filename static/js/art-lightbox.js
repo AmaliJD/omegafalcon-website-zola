@@ -88,7 +88,6 @@ function injectArtData(title, date, tagline, markdownHtml, images)
 
     lightboxCarousel.innerHTML = "";
     images.forEach((url, index) => {
-        // const decodedUrl = decodeURIComponent(url);
         const isVideo = url.toLowerCase().endsWith('.mp4');
         let element;
 
@@ -107,11 +106,6 @@ function injectArtData(title, date, tagline, markdownHtml, images)
         }
 
         element.className = 'lightbox-carousel-img';
-
-        // const img = document.createElement('img');
-        // img.src = decodeURIComponent(url);
-        // img.className = 'lightbox-carousel-img';
-        // img.loading = 'lazy';
         
         lightboxCarousel.appendChild(element);
     });
