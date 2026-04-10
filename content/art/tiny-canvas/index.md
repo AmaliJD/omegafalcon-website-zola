@@ -9,7 +9,7 @@ tagline = ""
 tags = []
 +++
 
-I painted these over the course of several months using some paint-like markers. I aimed to make each painting have a unique color focus using the limited colors I owned. The last canvas I used using newer watercolor markers; but i kinda scuffed that one up.
+I painted on these tiny little canvases over the course of several months using some paint-like markers. I aimed to make each painting have a unique color focus using the limited colors I owned. The last canvas I used using newer watercolor markers; but i kinda scuffed that one up.
 
 I never officially named them, so the names below are just descriptions of what's drawn.
 

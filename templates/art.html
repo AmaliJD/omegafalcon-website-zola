@@ -23,7 +23,7 @@
     {% endfor %}
     <button class="tag-btn" data-tag="misc">misc</button>
 
-    <button id="union-btn" data-mode="OR">+</button>
+    <button id="union-btn" data-mode="-">-</button>
 </div>
 
 <!-- GALLERY -->
@@ -135,6 +135,5 @@ style="
 <script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 <script src="{{ get_url(path="js/utils.js") | safe }}"></script>
 <script src="{{ get_url(path="js/art-lightbox.js") | safe }}"></script>
-<!-- <script src="{{ get_url(path="js/fetch-art-data.js") | safe }}"></script> -->
 <script src="{{ get_url(path="js/scroll-lock.js") | safe }}"></script>
 {% endblock content %}
