@@ -183,7 +183,8 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 120px;
+    /* height: 130px; */
+    height: 18vh;
     opacity: 0;
 
     transition: opacity 0.2s;
@@ -201,9 +202,9 @@
 }
 
 .bar-arrow {
-    width: 100px;
-    height: 100px;
-    top: 0px;
-    left: 20px;
+    width: 15vh;
+    height: 15vh;
+    top: -8px;
+    left: 12px;
     position: fixed;
 }

@@ -100,7 +100,8 @@
     content: "Filter Mode: " attr(data-mode);
 
     position: absolute;
-    left: 130%;
+    left: 45px;
+    bottom: 2px;;
 
     background: rgba(255, 245, 245, 0.788);
     color: var(--text-color,rgb(0, 0, 0));
@@ -111,7 +112,7 @@
     
     opacity: 0;
     pointer-events: none;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #union-btn:hover::after {
