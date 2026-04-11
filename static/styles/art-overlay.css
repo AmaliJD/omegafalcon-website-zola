@@ -124,6 +124,11 @@
     color: #eee;
 }
 
+#markdown-content a {
+    color: #ff863b;
+    text-decoration: underline;
+}
+
 .text-header {
     
 }

@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["omegafalcon"]
 +++
+
+What it feels like to give up on everything

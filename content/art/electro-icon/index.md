@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["geometry dash"]
 +++
+
+Drew this for Electrobolt911's birthday.

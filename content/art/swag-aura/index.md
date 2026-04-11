@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["omegafalcon"]
 +++
+
+I changed my icon colors in Geometry Dash to this and thought it looked really cool and funky, had to try to draw it.

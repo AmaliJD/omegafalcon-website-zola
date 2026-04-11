@@ -9,4 +9,4 @@ tagline = "Clocks"
 tags = ["geometry dash"]
 +++
 
-Trying out drawing a GD icon with this watercolor brush
+Trying out some watercolor brushes on this drawing of KlauxGD

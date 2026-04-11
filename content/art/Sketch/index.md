@@ -9,4 +9,4 @@ tagline = ""
 tags = ["sketch"]
 +++
 
-I used this canvas to test drawing with a drawing tablet for the first time
+I used this canvas to practice drawing with a drawing tablet for the first time

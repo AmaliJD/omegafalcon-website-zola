@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["geometry dash"]
 +++
+
+The four main characters of GD Legends
