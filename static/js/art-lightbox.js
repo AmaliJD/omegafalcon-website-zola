@@ -155,9 +155,16 @@ function updateButtonVisibility() {
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        window.location.hash = '';
+        returnToArt();
+        // window.location.hash = '';
+        // history.back();
     }
 });
+
+function returnToArt() {
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    fetchArtData();
+}
 
 // lightboxContainer.addEventListener('click', (e) => {
 //     const isInsideContent = e.target.closest('.lightbox-carousel') || 

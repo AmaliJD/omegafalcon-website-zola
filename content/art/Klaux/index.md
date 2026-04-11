@@ -8,3 +8,5 @@ tagline = "Clocks"
 [taxonomies]
 tags = ["geometry dash"]
 +++
+
+Trying out drawing a GD icon with this watercolor brush

@@ -36,7 +36,7 @@
 
     backface-visibility: hidden;
     transform: translateZ(0);
-    will-change: opacity, visibility;
+    will-change: opacity, visibility, backdrop-filter;
 }
 
 .lightbox-container.active {
