@@ -163,7 +163,7 @@ document.addEventListener('keydown', (e) => {
 
 function returnToArt() {
     window.history.pushState("", document.title, window.location.pathname + window.location.search);
-    fetchArtData();
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
 }
 
 // lightboxContainer.addEventListener('click', (e) => {
