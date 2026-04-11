@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["geometry dash"]
 +++
+
+Drawing Gokube and Omega in a simple friendly artstyle

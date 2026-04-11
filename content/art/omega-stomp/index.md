@@ -9,4 +9,4 @@ tagline = ""
 tags = ["omegafalcon"]
 +++
 
-Pwauful Maindgeam Man
+My subconscious compels me to cook for reasons I do not even understand
