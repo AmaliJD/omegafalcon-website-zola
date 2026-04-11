@@ -3,7 +3,7 @@ const modeButton = document.getElementById('union-btn');
 const photoCards = document.querySelectorAll('.photo-card');
 
 let selectedTags = new Set();
-let matchMode = 0; // 0 = CURR (-), 1 = ANY (+), 2 = ALL (×)
+let matchMode = 0; // 0 = SINGLE (-), 1 = ANY (+), 2 = ALL (×)
 
 // Toggle Mode
 modeButton.addEventListener('click', () => {
@@ -20,8 +20,9 @@ modeButton.addEventListener('click', () => {
         addTag(btn, lastTag);
     }
 
-    const modeNames = ['CURR', 'ANY', 'ALL'];
+    const modeNames = ['SINGLE', 'ANY', 'ALL'];
     modeButton.dataset.mode = modeNames[matchMode];
+
     // modeButton.classList.toggle('selected', strictMatchMode);
     applyFilters();
 });

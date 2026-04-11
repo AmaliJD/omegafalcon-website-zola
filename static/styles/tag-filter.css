@@ -54,7 +54,7 @@
     /* transition: box-shadow 0.15s; */
 }
 
-.tag-filter button[data-mode*="CURR"]:hover#union-btn {
+.tag-filter button[data-mode*="SINGLE"]:hover#union-btn {
     transform: translateY(0px) rotate(0deg);
 
     
@@ -89,9 +89,31 @@
 .tag-filter button[data-mode*="ANY"]:hover#union-btn {
     background-color: #2189e4;
     color: var(--btn-color, #cffffa);
-    border-color: #2ea7f1;
+    border-color: #4fbcff;
 }
 
 .tag-filter button:hover#union-btn {
     transform: translateY(0px) rotate(0deg);
+}
+
+#union-btn::after {
+    content: "Filter Mode: " attr(data-mode);
+
+    position: absolute;
+    left: 130%;
+
+    background: rgba(255, 245, 245, 0.788);
+    color: var(--text-color,rgb(0, 0, 0));
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#union-btn:hover::after {
+    opacity: 1;
 }
