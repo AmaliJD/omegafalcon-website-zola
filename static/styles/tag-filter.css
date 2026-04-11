@@ -44,26 +44,17 @@
 /* UNION */
 .tag-filter button#union-btn {
     font-size: 20px;
-    /* font-weight: 550; */
     font-family: sans-serif;
-    padding: 4px 10px;
+    padding: 4px 4px;
+    margin-left: 40px;
     border: solid;
     border-color: transparent;
-
+    width: 36.2px;
+    height: 36.2px;
     /* transition: box-shadow 0.15s; */
 }
 
-.tag-filter button.selected#union-btn {
-    background-color: #9b2828;
-    color: var(--btn-color, #ffffff);
-
-    font-style: italic;
-    transform: rotate(-45deg);
-
-    box-shadow: 0px 4.2px 0px rgba(130, 48, 37, 0.333);
-}
-
-.tag-filter button:hover:not(.selected)#union-btn {
+.tag-filter button[data-mode*="CURR"]:hover#union-btn {
     transform: translateY(0px) rotate(0deg);
 
     
@@ -72,8 +63,35 @@
     border-color: var(--text-color, #000000);
 }
 
-.tag-filter button:hover.selected#union-btn {
+.tag-filter button[data-mode*="ALL"]#union-btn {
+    background-color: #9b2828;
+    color: var(--btn-color, #ffffff);
+
+    /* transform: rotate(-45deg); */
+
+    /* box-shadow: 0px 4.2px 0px rgba(130, 48, 37, 0.333); */
+    box-shadow: 3px 3px 0px rgba(130, 48, 37, 0.333);
+}
+
+.tag-filter button[data-mode*="ALL"]:hover#union-btn {
     background-color: #851418;
     color: var(--btn-color, #ffffff);
     border-color: #c85777;
+}
+
+.tag-filter button[data-mode*="ANY"]#union-btn {
+    background-color: #24a7ff;
+    color: #cffffa;
+
+    box-shadow: 3px 3px 0px rgba(29, 24, 80, 0.333);
+}
+
+.tag-filter button[data-mode*="ANY"]:hover#union-btn {
+    background-color: #2189e4;
+    color: var(--btn-color, #cffffa);
+    border-color: #2ea7f1;
+}
+
+.tag-filter button:hover#union-btn {
+    transform: translateY(0px) rotate(0deg);
 }
