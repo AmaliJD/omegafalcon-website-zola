@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["omegafalcon"]
 +++
+
+OmegaFalcon with my irl hairdo. Looking pretty damn fly right ;)

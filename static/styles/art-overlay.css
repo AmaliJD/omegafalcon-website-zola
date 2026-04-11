@@ -120,7 +120,7 @@
     line-height: 1.8;
 }
 
-#markdown-content h1, #markdown-content h2, #markdown-content h3 {
+#markdown-content h1, #markdown-content h2, #markdown-content h3, #markdown-content h4 {
     color: #eee;
 }
 
