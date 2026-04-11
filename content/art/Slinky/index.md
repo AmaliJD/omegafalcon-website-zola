@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = ["creatures"]
 +++
+
+Would you give Slinky a hug?

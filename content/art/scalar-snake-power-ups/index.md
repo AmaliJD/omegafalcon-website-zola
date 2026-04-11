@@ -8,3 +8,6 @@ tagline = ""
 [taxonomies]
 tags = []
 +++
+
+Powerup art I made for my GMTK Game Jam 2024 entry
+<a href="https://omegafalcon.itch.io/scalar-snake" target="_blank">Scalar Snake</a>

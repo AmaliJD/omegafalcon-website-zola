@@ -9,4 +9,6 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-My favorite level in the game
+Drawing of my favorite section of one of my favorite Geomerty Dash levels **I See Stars**.
+
+<video src="/images/iss.mp4" controls loop muted playsinline width="70%" alt="I See Stars">

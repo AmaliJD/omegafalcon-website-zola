@@ -116,12 +116,25 @@ function injectArtData(title, date, tagline, markdownHtml, images)
 }
 
 let currentImgIndex = 0;
+let wrap = false;
 
 function moveCarousel(direction) {
     const totalImages = lightboxCarousel.children.length;
 
-    // Update and clamp the index
-    currentImgIndex = Math.max(0, Math.min(currentImgIndex + direction, totalImages - 1));
+    if (wrap)
+    {
+        currentImgIndex += direction;
+        if (currentImgIndex < 0)
+            currentImgIndex += totalImages;
+
+        currentImgIndex = currentImgIndex % totalImages;
+    }
+    else
+    {
+        currentImgIndex = Math.max(0, Math.min(currentImgIndex + direction, totalImages - 1));
+    }
+    
+    // currentImgIndex = Math.max(0, Math.min(currentImgIndex + direction, totalImages - 1));
 
     // We set the variable on the CAROUSEL, but the IMAGES use it to move
     lightboxCarousel.style.setProperty('--offset', currentImgIndex);
@@ -143,6 +156,10 @@ function updateButtonVisibility() {
 
     prevBtn.classList.remove('is-hidden');
     nextBtn.classList.remove('is-hidden');
+
+    if (wrap)
+        return;
+
     if (currentImgIndex === 0)
     {
         prevBtn.classList.add('is-hidden');
