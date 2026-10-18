@@ -228,8 +228,9 @@
 
     .lightbox-left {
         flex: 0 0 auto;
-        height: auto;
+        
         max-height: 50vh;
+        height: auto;
 
         width: 65%;
         align-self: center;

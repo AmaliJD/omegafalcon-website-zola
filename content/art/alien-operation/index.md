@@ -6,7 +6,7 @@ title = "Alien Operation"
 tagline = ""
 
 [taxonomies]
-tags = []
+tags = ["creatures"]
 +++
 
 Art I made for my GMTK Game Jam 2026 entry
