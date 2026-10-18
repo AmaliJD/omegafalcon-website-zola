@@ -21,11 +21,11 @@
         rgba(18, 14, 16, 0.98) 100%);
 
     /* background: radial-gradient(circle at center, rgba(20, 20, 20, 0.5) 0%, rgba(10, 10, 10, 1) 100%); */
-    
+
     /* background: rgba(0, 0, 0, 0.9); */
 
     /* background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png"); */
-    
+
     backdrop-filter: blur(5px) saturate(80%);
     -webkit-backdrop-filter: blur(5px) saturate(80%);
 
@@ -48,12 +48,12 @@
 .lightbox-content {
     display: flex;
     flex-direction: row;
-    
+
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    
-    align-items: stretch; 
+
+    align-items: stretch;
 }
 
 .lightbox-left {
@@ -87,7 +87,7 @@
     gap: 80px;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
-    
+
     justify-content: start;
     align-items: center;
     overflow: hidden;
@@ -130,7 +130,7 @@
 }
 
 .text-header {
-    
+
 }
 
 .text-tagline {
@@ -161,7 +161,7 @@
     cursor: pointer;
     font-size: 2rem;
     transition: background 0.2s, color 0.2s, opacity 0.1s;
-    
+
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -212,4 +212,31 @@
     top: -8px;
     left: 12px;
     position: fixed;
+}
+
+@media (max-width: 768px) {
+    .lightbox-content {
+        flex-direction: column-reverse;
+    }
+
+    .lightbox-right {
+        flex: 1;
+        padding-bottom: 2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .lightbox-left {
+        flex: 0 0 auto;
+        height: auto;
+        max-height: 50vh;
+
+        width: 65%;
+        align-self: center;
+        padding: 25px;
+    }
+
+    #lightbox-carousel {
+        height: auto;
+    }
 }
