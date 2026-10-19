@@ -46,10 +46,10 @@
         {% set icon4 = resize_image(path="/images/GDLF Stickers/Hacker.png", width=50, height=50, op="fill", format="png") %}
         {% set icon5 = resize_image(path="/images/GDLF Stickers/Coke.png", width=50, height=50, op="fill", format="png") %}
         {% set icon6 = resize_image(path="/images/GDLF Stickers/BT.png", width=50, height=50, op="fill", format="png") %}
-        <img src="{{ icon0.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 130px; --delay: 0s">
-        <img src="{{ icon1.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 90px; --delay: 0.2s">
-        <img src="{{ icon2.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 50px; --delay: 0.4s">
-        <img src="{{ icon3.url }}" class="strip-icon is-fading" decoding="async" draggable="false" style="right: 10px; --delay: 0.6s">
+        <img src="{{ icon0.url }}" class="strip-icon is-fading" id="strip-icon-1" decoding="async" draggable="false" style="right: 130px; --delay: 0s">
+        <img src="{{ icon1.url }}" class="strip-icon is-fading" id="strip-icon-2" decoding="async" draggable="false" style="right: 90px; --delay: 0.2s">
+        <img src="{{ icon2.url }}" class="strip-icon is-fading" id="strip-icon-3" decoding="async" draggable="false" style="right: 50px; --delay: 0.4s">
+        <img src="{{ icon3.url }}" class="strip-icon is-fading" id="strip-icon-4" decoding="async" draggable="false" style="right: 10px; --delay: 0.6s">
         <script>
             const iconList = [
                 "{{ icon1.url | safe }}",

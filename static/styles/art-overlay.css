@@ -65,6 +65,7 @@
 
     overflow: hidden;
 
+    /* background: #ffffff5b; */
     color: #eee;
 
     position: relative;
@@ -186,35 +187,28 @@
     pointer-events: none;
 }
 
-.lightbox-back-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* height: 130px; */
-    height: 18vh;
-    opacity: 0;
+.lightbox-nav-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.lightbox-nav-buttons svg {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    opacity: .25;
     transition: opacity 0.2s;
     pointer-events: auto;
 }
 
-.lightbox-back-bar:hover {
-    opacity: 1;
-}
-
-.bar-gradient {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.bar-arrow {
-    width: 15vh;
-    height: 15vh;
-    top: -8px;
-    left: 12px;
-    position: fixed;
+.lightbox-nav-buttons svg:hover {
+    opacity: .7;
 }
 
 @media (max-width: 768px) {
@@ -223,24 +217,26 @@
     }
 
     .lightbox-right {
-        flex: 1;
-        padding-bottom: 2rem;
+        flex: 0 1 auto;
+        max-height: 65vh;
+
+        padding-bottom: 0;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .lightbox-left {
-        flex: 0 0 auto;
-        
-        max-height: 50vh;
-        height: auto;
-
-        width: 65%;
+        max-width: 100%;
         align-self: center;
-        padding: 25px;
     }
 
     #lightbox-carousel {
-        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    #markdown-content {
+        padding-top: 5.8vh;
     }
 }

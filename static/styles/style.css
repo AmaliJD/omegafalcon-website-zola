@@ -31,6 +31,24 @@ html {
     transition: transform 0.3s, rotate 0.3s, scale 0.3s;
 }
 
+@media (max-width: 480px) {
+    #strip-icon-1 {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 440px) {
+    #strip-icon-2 {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 400px) {
+    #strip-icon-3 {
+        visibility: hidden;
+    }
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
