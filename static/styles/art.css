@@ -210,3 +210,15 @@
 .photo-card:hover .radio-buttons{
     opacity: 1;
 }
+
+@media (max-width: 837px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 572px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
