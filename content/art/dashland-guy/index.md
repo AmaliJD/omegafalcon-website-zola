@@ -9,4 +9,4 @@ tagline = ""
 tags = ["dashland"]
 +++
 
-Character from my game Dashland
+Player character from my scrapped dream-platformer _Dashland_.
