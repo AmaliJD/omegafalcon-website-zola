@@ -9,4 +9,4 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-Drawing Gokube and Omega in a simple friendly artstyle
+Drawing Gokube and Omega in a simple friendly artstyle.

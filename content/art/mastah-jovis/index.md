@@ -9,4 +9,4 @@ tagline = ""
 tags = ["creatures", "sketch"]
 +++
 
-I let my hand move wherever it felt right and this guy was born
+I let my hand move wherever it felt right and this guy was born.

@@ -9,4 +9,4 @@ tagline = ""
 tags = []
 +++
 
-That feeling of cold blood dripping out of your heart
+It feels like stinging cold blood dripping out of my heart.

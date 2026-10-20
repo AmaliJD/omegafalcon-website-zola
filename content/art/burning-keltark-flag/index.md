@@ -8,3 +8,5 @@ tagline = ""
 [taxonomies]
 tags = []
 +++
+
+Dramatic burning of the Keltark flag. The Keltarks are a fictional society from Electrobolt911's Geometry Dash animation series

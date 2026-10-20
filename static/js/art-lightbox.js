@@ -183,6 +183,13 @@ function returnToArt() {
     window.dispatchEvent(new HashChangeEvent('hashchange'));
 }
 
+function stopAllMedia() {
+    document.querySelectorAll('video, audio').forEach(media => {
+        media.pause();
+        media.currentTime = 0;
+    });
+}
+
 // lightboxContainer.addEventListener('click', (e) => {
 //     const isInsideContent = e.target.closest('.lightbox-carousel') || 
 //                             e.target.closest('.markdown-content');
