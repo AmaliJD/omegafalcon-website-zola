@@ -9,4 +9,4 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-CW2003 has the same icon as the cube story Hacker
+CW2003 has the same icon as the cube story Hacker.

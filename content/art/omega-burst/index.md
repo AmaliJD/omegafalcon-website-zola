@@ -9,4 +9,4 @@ tagline = ""
 tags = ["omegafalcon"]
 +++
 
-Idek how to describe what exactly's going on here
+Idek how to describe what exactly's going on here.

@@ -9,4 +9,4 @@ tagline = ""
 tags = ["geometry dash"]
 +++
 
-The four main characters of GD Legends
+The four main characters of GD Legends.

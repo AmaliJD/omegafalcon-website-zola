@@ -6,7 +6,7 @@ title = "Shading Tests"
 tagline = ""
 
 [taxonomies]
-tags = ["geometry dash"]
+tags = ["geometry dash", "sketch"]
 +++
 
-Trying to figure out the style for a potential GD Legends comic
+Trying to figure out the style for a potential GD Legends comic.

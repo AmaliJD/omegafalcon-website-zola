@@ -9,4 +9,4 @@ tagline = ""
 tags = ["omegafalcon"]
 +++
 
-What it feels like to give up on everything
+How I feel giving up on everything and letting myself decompose.

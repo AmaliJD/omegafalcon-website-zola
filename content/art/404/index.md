@@ -9,4 +9,4 @@ tagline = "404 Error Not Found"
 tags = ["omegafalcon"]
 +++
 
-They say the eyes are the window to the soul.
+They say the eyes are the windows to the soul.

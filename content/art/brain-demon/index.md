@@ -8,5 +8,3 @@ tagline = ""
 [taxonomies]
 tags = ["omegafalcon"]
 +++
-
-The demon that lives in OmegaFalcon's head
