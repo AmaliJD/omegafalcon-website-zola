@@ -118,3 +118,30 @@
 #union-btn:hover::after {
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .tag-filter button {
+        font-size: 15px;
+        padding: 4px 12px;
+
+        margin-right: 8px;
+        margin-bottom: 10px;
+    }
+
+    .tag-filter button#union-btn {
+        font-size: 15px;
+        padding: 4px 4px;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #union-btn::after {
+        left: 35px;
+        bottom: 4px;
+
+        padding: 3px 8px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+}
