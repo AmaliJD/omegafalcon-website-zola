@@ -1,0 +1,27 @@
+html {
+    background: var(--bg-color-1, #ffffff);
+}
+
+.container {
+    font-family: var(--font-heading);
+
+    position: fixed;
+    display: flex;
+
+    width: 100vw;
+    height: 95vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container div {
+    text-align: center;
+    padding: 3px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 84vh;
+    }
+}
