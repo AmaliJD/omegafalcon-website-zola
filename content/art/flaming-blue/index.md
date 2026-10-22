@@ -17,4 +17,6 @@ I was inspired by this classic image of Vegeta engulfed in flames.
 
 <img src="/images/flaming vegeta.jpg" width="150" alt="Vegeta in flames - hyperbolic time chamber">
 
-The flames around Omega are strong but he stands firm, never letting himself become consumed. His own internal fire glows vibrantly, in a form starkly contrasting the flames of the outside.
+In the Vegeta scene, the fire in the room is coming from his own power. In this drawing, however, Omega's internal blue flame rages in contrast against the surrounding orange flame that tries to consume him, symbolizing the strength of his own drive that fuels him.
+
+It burns hotter.

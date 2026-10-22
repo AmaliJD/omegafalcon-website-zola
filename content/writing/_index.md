@@ -1,8 +1,8 @@
 +++
 title = "My Writing"
-template = "blog.html"
+template = "writing.html"
 sort_by = "date"
-page_template = "blog-page.html"
+page_template = "writing-page.html"
 
 [extra.colors]
 bg_color_1 = "#f4fdffff"

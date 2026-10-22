@@ -9,3 +9,7 @@ function unlockScroll() {
     document.body.classList.remove('no-scroll');
     // window.scrollTo(0, scrollPosition);
 }
+
+function toggleScrollLock() {
+    document.body.classList.toggle('no-scroll');
+}
