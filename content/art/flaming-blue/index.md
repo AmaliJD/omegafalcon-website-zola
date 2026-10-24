@@ -20,3 +20,6 @@ I was inspired by this classic image of Vegeta engulfed in flames.
 In the Vegeta scene, the fire in the room is coming from his own power. In this drawing, however, Omega's internal blue flame rages in contrast against the surrounding orange flame that tries to consume him, symbolizing the strength of his own drive that fuels him.
 
 It burns hotter.
+
+<img src="bitchin.png">
+![Test](bitchin.png)
