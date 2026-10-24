@@ -32,10 +32,10 @@
         {% set_global main_imgs = [] %}
         {% set_global extra_imgs = [] %}
         {% for asset in artwork.assets %}
-            {% if asset is containing("\extras\") %}
-                {% set_global extra_imgs = extra_imgs | concat(with=asset) %}
+            {% if "extras" in asset %}
+                {% set_global extra_imgs = [...extra_imgs, asset] %}
             {% else %}
-                {% set_global main_imgs = main_imgs | concat(with=asset) %}
+                {% set_global main_imgs = [...main_imgs, asset] %}
             {% endif %}
         {% endfor %}
 
