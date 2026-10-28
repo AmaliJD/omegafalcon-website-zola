@@ -1,0 +1,17 @@
+.grid-container {
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 5px;
+
+    background: linear-gradient(
+        172deg in oklab,
+        #ffffffaa,
+        #ffffff88);
+    padding: 10px;
+    
+    border-radius: 5px;
+}

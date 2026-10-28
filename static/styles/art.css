@@ -1,22 +1,3 @@
-/* .gallery {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-auto-rows: 180px;
-    gap: .4rem;
-
-    background: linear-gradient(
-        172deg in oklab,
-        rgba(104, 54, 16, 0.1),
-        rgba(57, 26, 78, 0.315),
-        rgba(17, 5, 70, 0.637));
-    padding: 10px;
-    border-radius: 5px;
-} */
-
 .gallery {
     position: relative;
     display: grid;
