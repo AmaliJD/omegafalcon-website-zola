@@ -26,10 +26,25 @@
 </head>
 
 <body>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-bg"></div>
+    <nav class="navbar">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/art/" class="nav-link">Art</a>
+        <a href="/writing/" class="nav-link">Writing</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+    </nav>
+
     <section class="section">
-        <div class="container">
+        <div class="blank-container">
             {% block content %}
             {% endblock content %}
         </div>
     </section>
 </body>
+
+<script src="{{ get_url(path="js/nav-menu.js") | safe }}"></script>
