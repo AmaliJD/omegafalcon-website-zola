@@ -3,10 +3,11 @@ date = 2024-09-05
 title = "Bitchin'"
 
 [extra]
-tagline = "Bitches be crazy"
+subtitle = "Bitches be crazy"
+description = "A detailed look into how bitches are formed"
 
 [taxonomies]
-tags = ["bitches"]
+writing-tags = ["bitches"]
 +++
 
 # BITCHIN'

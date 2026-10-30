@@ -11,28 +11,41 @@
     {{section.title}}
 </h1>
 
+<!-- TAG FILTERS -->
+<div class="tag-filter">    
+    {% set tags = get_taxonomy(kind="writing-tags") %}
+    {% for tag in tags.items %}
+        <button class="tag-btn" data-tag="{{ tag.name }}">{{ tag.name }}</button>
+    {% endfor %}
+    <button class="tag-btn" data-tag="misc">misc</button>
+
+    <button id="union-btn" data-mode="SINGLE">⋅</button>
+</div>
+
+<!-- GALLERY -->
 <div class="grid-container">
     {% for article in section.pages %}
     <div class="title-card">
         <div class="thumbnail">
             {% set_global thumbnail_path = "" %}
             {% for asset in article.assets %}
-            {% set_global thumbnail_path = asset %}
                 {% if "thumbnail" in asset and asset is matching(pat="\\.(png|jpg|jpeg|webp)$") %}
                     {% set_global thumbnail_path = asset %}
                 {% endif %}
             {% endfor %}
 
-            {% set image = resize_image(path=thumbnail_path, width=256, height=256, op="fill", format="png") %}
+            {% set image = resize_image(path=thumbnail_path, width=256, height=200, op="fill", format="png") %}
             <img src="{{ image.url }}" alt="{{ article.title }}" class="thumbail-image" decoding="async">
         </div>
         <div class="title">
             <h2>{{article.title}}</h2>
-            <em>{{article.extra.tagline}}</em>
-            <p>{{article.date | date(format="%b %d, %Y")}}</p>
+            <em>{{article.extra.subtitle}}</em>
+            <p>{{article.extra.description}}</p>
+            <p class="date">{{article.date | date(format="%b %d, %Y")}}</p>
         </div>
     </div>
     {% endfor %}
 </div>
 
+<script src="{{ get_url(path="js/filter.js") | safe }}"></script>
 {% endblock content %}

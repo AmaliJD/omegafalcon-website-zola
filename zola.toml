@@ -9,6 +9,7 @@ build_search_index = true
 
 taxonomies = [
     { name = "tags", render = false},
+    { name = "writing-tags", render = false},
 ]
 
 [markdown]
