@@ -9,4 +9,6 @@ bg_color_1 = "#f4fdffff"
 bg_color_2 = "#b9d2f8ff"
 text_color = "#192e47ff"
 btn_color = "#fafcffff"
+btn_hover = "#e3eeff"
+btn_shadow = "#25398255"
 +++

@@ -1,6 +1,6 @@
 +++
 date = 2024-09-01
-title = "How to eat 25 hotdogs — and live!"
+title = "Starting the rewrite with Bevy"
 
 [extra]
 subtitle = "Dead at 8"

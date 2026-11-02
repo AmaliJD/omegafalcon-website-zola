@@ -8,5 +8,7 @@ sort_by = "date"
 bg_color_1 = "#fff8f9ff"
 bg_color_2 = "#e8a69eff"
 text_color = "#6d0f29ff"
-btn_color = "rgb(255, 250, 250)"
+btn_color = "#fffafa"
+btn_hover = "#fae5e5"
+btn_shadow = "#82302555"
 +++

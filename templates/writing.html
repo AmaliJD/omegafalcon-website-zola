@@ -41,7 +41,10 @@
             <h2>{{article.title}}</h2>
             <em>{{article.extra.subtitle}}</em>
             <p>{{article.extra.description}}</p>
-            <p class="date">{{article.date | date(format="%b %d, %Y")}}</p>
+            <p class="date">
+                {{article.date | date(format="%Y")}} <br>
+                {{article.date | date(format="%m / %d")}}
+            </p>
         </div>
     </div>
     {% endfor %}
