@@ -22,10 +22,25 @@
     <button id="union-btn" data-mode="SINGLE">⋅</button>
 </div>
 
+<!-- DEBUG TEXT -->
+<span class="debug-text"
+style="
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--text-color, #ffffff);
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: bold;">
+    {% set count = section.pages | length %}
+    Total Entries: {{ count }}
+</span>
+
 <!-- GALLERY -->
 <div class="grid-container">
     {% for article in section.pages %}
-    <div class="title-card">
+    <div class="title-card"
+        data-tags="{% if article.taxonomies["writing-tags"] %}{{ article.taxonomies["writing-tags"] | join(sep=',') }}{% else %}{{ 'misc' }}{% endif %}">
         <div class="thumbnail">
             {% set_global thumbnail_path = "" %}
             {% for asset in article.assets %}

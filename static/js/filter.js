@@ -1,6 +1,6 @@
 const tagButtons = document.querySelectorAll('.tag-btn');
 const modeButton = document.getElementById('union-btn');
-const photoCards = document.querySelectorAll('.photo-card');
+const cards = document.querySelectorAll('.photo-card, .title-card');
 
 let selectedTags = new Set();
 let matchMode = 0; // 0 = SINGLE (-), 1 = ANY (+), 2 = ALL (×)
@@ -48,7 +48,7 @@ tagButtons.forEach(btn => {
 
 function applyFilters()
 {
-    photoCards.forEach(card => {
+    cards.forEach(card => {
         // Get tags from the card and turn into an array
         const tagsDataString = card.getAttribute('data-tags');
         const photoCardTags = tagsDataString ? tagsDataString.split(',') : [];
