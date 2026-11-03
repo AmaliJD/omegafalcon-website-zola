@@ -1,5 +1,7 @@
 const tagButtons = document.querySelectorAll('.tag-btn');
 const modeButton = document.getElementById('union-btn');
+const onCardTagButtons = document.querySelectorAll('.tag-btn-card');
+const onCardModeButtons = document.querySelectorAll('.union-btn-card');
 const cards = document.querySelectorAll('.photo-card, .title-card');
 
 let selectedTags = new Set();
@@ -25,6 +27,10 @@ modeButton.addEventListener('click', () => {
 
     // modeButton.classList.toggle('selected', strictMatchMode);
     applyFilters();
+
+    onCardModeButtons.forEach(btn => {
+        btn.textContent = modeSymbols[matchMode];
+    });
 });
 
 // Click Tag Button
@@ -34,15 +40,45 @@ tagButtons.forEach(btn => {
         if (selectedTags.has(tag))
         {
             removeTag(btn, tag);
+
+            onCardTagButtons.forEach(btn => {
+                if (btn.getAttribute('data-tag') === tag)
+                    btn.classList.remove('selected');
+            });
         }
         else
         {
             if (matchMode === 0)
+            {
                 clearTags();
+                onCardTagButtons.forEach(btn => btn.classList.remove('selected'));
+            }
             
             addTag(btn, tag);
+
+            onCardTagButtons.forEach(btn => {
+                if (btn.getAttribute('data-tag') === tag)
+                    btn.classList.add('selected');
+            });
         }
         applyFilters();
+    });
+});
+
+onCardTagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tag = btn.getAttribute('data-tag');
+
+        const tag_btn = [...tagButtons].find(
+            tag_btn => tag_btn.getAttribute('data-tag') === tag
+        );
+        tag_btn.click();
+    });
+});
+
+onCardModeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modeButton.click();
     });
 });
 

@@ -61,6 +61,16 @@ style="
                 {{article.date | date(format="%m / %d")}}
             </p>
         </div>
+        <div class="tag-filter-card">
+            {% if article.taxonomies["writing-tags"] %}
+                {% for tag in article.taxonomies["writing-tags"] %}
+                    <button class="tag-btn-card" data-tag="{{ tag }}">{{ tag }}</button>
+                {% endfor %}
+            {% else %}
+                <button class="tag-btn-card" data-tag="misc">misc</button>
+            {% endif %}
+            <button class="union-btn-card"">⋅</button>
+        </div>
     </div>
     {% endfor %}
 </div>
